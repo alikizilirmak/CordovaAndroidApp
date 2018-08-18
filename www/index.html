@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="CordovaApp">
+    <head>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
+        <script src="js/app.js"></script>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+       
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+
+        <title>Cordova App</title>
+    </head>
+    <body>
+        <div ng-controller="mainController as vm" id="main">
+
+            <button style="position:absolute;bottom:65%;width:100%;" 
+                    class="btn btn-info" 
+                    ng-click="vm.getLocation()">START</button></br>
+
+            <textarea readonly ng-model="vm.message"
+                        style="background-color:transparent;border:none;position:absolute;
+                            bottom:46%;width:100%;overflow:hidden;display:block;
+                            border-radius:10px;border:6px solid #556677;overflow:hidden;
+                            font-size:15px;height:100px;text-align-last: center;color:#8A0808">
+            </textarea>
+                    
+
+            <button style="position:absolute;bottom:35%;width:100%;"
+                    class="btn btn-danger"
+                    ng-click="vm.stopGettingLocation()">STOP</button>
+
+        </div>
+    </body>
+</html>
